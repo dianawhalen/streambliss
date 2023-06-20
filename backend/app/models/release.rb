@@ -1,3 +1,4 @@
 class Release < ApplicationRecord
-  belongs_to :watchlist
+  has_many :favorites
+  has_many :favorite_users, through: :favorites, source: :user
 end
