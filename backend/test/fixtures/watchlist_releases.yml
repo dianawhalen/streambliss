@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  watchlist: one
+  release: one
+
+two:
+  watchlist: two
+  release: two

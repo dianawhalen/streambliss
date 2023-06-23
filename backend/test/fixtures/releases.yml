@@ -3,27 +3,15 @@
 one:
   title: MyString
   type: 
-  tmdb_id: 1
-  tmdb_type: MyString
-  imdb_id: MyString
-  season_number: 1
+  show_id: 1
+  year: 1
+  result_type: MyString
   poster_url: MyString
-  source_release_date: 2023-06-20
-  source_id: 1
-  source_name: MyString
-  is_original: false
-  watchlist: one
 
 two:
   title: MyString
   type: 
-  tmdb_id: 1
-  tmdb_type: MyString
-  imdb_id: MyString
-  season_number: 1
+  show_id: 1
+  year: 1
+  result_type: MyString
   poster_url: MyString
-  source_release_date: 2023-06-20
-  source_id: 1
-  source_name: MyString
-  is_original: false
-  watchlist: two
