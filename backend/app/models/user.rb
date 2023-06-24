@@ -3,4 +3,6 @@ class User < ApplicationRecord
   has_one :watchlist
   has_many :favorites, dependent: :destroy
   has_many :favorite_releases, through: :favorites, source: :release
+
+  validates :username, :email, presence: true
 end
