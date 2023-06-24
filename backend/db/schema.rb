@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_164328) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_24_011657) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_164328) do
     t.datetime "updated_at", null: false
     t.index ["release_id"], name: "index_favorites_on_release_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
+  create_table "release_sources", force: :cascade do |t|
+    t.bigint "release_id", null: false
+    t.bigint "source_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["release_id"], name: "index_release_sources_on_release_id"
+    t.index ["source_id"], name: "index_release_sources_on_source_id"
   end
 
   create_table "releases", force: :cascade do |t|
@@ -69,6 +78,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_164328) do
 
   add_foreign_key "favorites", "releases"
   add_foreign_key "favorites", "users"
+  add_foreign_key "release_sources", "releases"
+  add_foreign_key "release_sources", "sources"
   add_foreign_key "watchlist_releases", "releases"
   add_foreign_key "watchlist_releases", "watchlists"
   add_foreign_key "watchlists", "users"
