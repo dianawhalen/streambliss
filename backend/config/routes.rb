@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   resources :users, only: [:show, :create, :update, :destroy] do
     resource :watchlist, only: [:show, :update]
     resources :favorites, only: [:index, :update]
