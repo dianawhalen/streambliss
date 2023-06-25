@@ -293,3 +293,19 @@ FOREIGN KEY ("source_id")
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mRelease Load (2.8ms)[0m  [1m[34mSELECT "releases".* FROM "releases"[0m
   [1m[36mSource Load (1.6ms)[0m  [1m[34mSELECT "sources".* FROM "sources"[0m
+Started GET "/" for ::1 at 2023-06-25 03:14:11 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.9ms | Allocations: 780)
+Completed 200 OK in 52ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 9062)
+
+
+Started GET "/users" for ::1 at 2023-06-25 03:14:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-06-25 03:14:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
