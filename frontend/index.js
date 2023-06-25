@@ -42,3 +42,14 @@ function displayUser(user) {
     <p>${user.email}</p>
   `;
 }
+
+function fetchUser(id) {
+  fetch(`http://localhost:3000/users/${id}`)
+    .then(response => response.json())
+    .then(user => displayUser(user));
+}
+
+document.querySelector('#show-user-link').addEventListener('click', function() {
+  const id = this.dataset.userId;
+  fetchUser(id);
+});
