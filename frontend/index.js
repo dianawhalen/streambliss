@@ -101,4 +101,33 @@ document.querySelector('main').addEventListener('submit', function(event) {
   }
 });
 
+function displayNewSessionForm() {
+  const main = document.querySelector('main');
+  const form = document.createElement('div');
+  form.innerHTML = newSessionForm();
+  main.appendChild(form);
+}
+
+function fetchData() {
+  fetch('https://api.watchmode.com/v1/autocomplete-search/?apiKey=wXr0tpIrPU0QoupBDhPmvzeKtYSX97Dxdd4nekY3&search_value=Breaking%20bad&search_type=1')
+    .then(response => response.json())
+    .then(data => {
+      const mappedData = data.map(item => ({
+        title: item.name,
+        type: item.type,
+        show_id: item.id,
+        year: item.year,
+        result_type: item.result_type,
+        poster_url: item.image_url
+      }));
+
+      const main = document.querySelector('main');
+      const p = document.createElement('p');
+      p.textContent = JSON.stringify(mappedData);
+      main.appendChild(p);
+    })
+    .catch(error => console.error('Error:', error));
+}
+
 displayNewSessionForm();
+fetchData();
