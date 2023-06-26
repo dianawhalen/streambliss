@@ -100,3 +100,5 @@ document.querySelector('main').addEventListener('submit', function(event) {
       });
   }
 });
+
+displayNewSessionForm();
