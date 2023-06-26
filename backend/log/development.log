@@ -334,3 +334,16 @@ Started GET "/index" for ::1 at 2023-06-25 03:29:41 -0600
   
 ActionController::RoutingError (No route matches [GET] "/index"):
   
+Started GET "/" for ::1 at 2023-06-25 06:01:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 666)
+Completed 200 OK in 23ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 6578)
+
+
+Started OPTIONS "/users" for ::1 at 2023-06-25 22:37:59 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  
