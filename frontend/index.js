@@ -17,7 +17,10 @@ function displayNewUserForm() {
   main.innerHTML = newUserForm();
 }
 
-document.querySelector('#new-user-link').addEventListener('click', displayNewUserForm);
+let newUserLink = document.querySelector('#new-user-link');
+if (newUserLink) {
+  newUserLink.addEventListener('click', displayNewUserForm);
+}
 
 document.querySelector('main').addEventListener('submit', function(event) {
   if (event.target.matches('#new-user-form')) {
@@ -49,10 +52,13 @@ function fetchUser(id) {
     .then(user => displayUser(user));
 }
 
-document.querySelector('#show-user-link').addEventListener('click', function() {
-  const id = this.dataset.userId;
-  fetchUser(id);
-});
+let showUserLink = document.querySelector('#show-user-link');
+if (showUserLink) {
+  showUserLink.addEventListener('click', function() {
+    const id = this.dataset.userId;
+    fetchUser(id);
+  });
+}
 
 function newSessionForm() {
   return `
@@ -71,7 +77,10 @@ function displayNewSessionForm() {
   main.innerHTML = newSessionForm();
 }
 
-document.querySelector('#new-session-link').addEventListener('click', displayNewSessionForm);
+let newSessionLink = document.querySelector('#new-session-link');
+if (newSessionLink) {
+  newSessionLink.addEventListener('click', displayNewSessionForm);
+}
 
 document.querySelector('main').addEventListener('submit', function(event) {
   if (event.target.matches('#new-session-form')) {
