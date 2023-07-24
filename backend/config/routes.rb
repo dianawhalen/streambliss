@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:index, :update]
   end
 
-  resources :releases, only: [:index, :show] do
+  resources :releases, only: [:index, :show, :create] do
     resources :sources, only: [:index]
   end
 

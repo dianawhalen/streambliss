@@ -393,3 +393,1031 @@ Completed 500 Internal Server Error in 282ms (ActiveRecord: 8.9ms | Allocations:
 ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
   
 app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2023-06-28 09:10:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 666)
+Completed 200 OK in 20ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 6536)
+
+
+Started GET "/index" for ::1 at 2023-06-28 09:11:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-06-28 09:11:02 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/login" for ::1 at 2023-06-28 09:11:43 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 20.3ms | Allocations: 22760)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started POST "/login" for ::1 at 2023-06-28 12:27:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 7.2ms | Allocations: 43232)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2023-06-28 12:42:06 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 666)
+Completed 200 OK in 27ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 6536)
+
+
+Started POST "/login" for ::1 at 2023-06-28 12:46:40 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 264ms (ActiveRecord: 4.8ms | Allocations: 22809)
+
+
+Started GET "/users/2" for ::1 at 2023-06-28 12:46:40 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 806)
+
+
+Started POST "/login" for ::1 at 2023-06-28 12:47:48 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 244ms (ActiveRecord: 0.3ms | Allocations: 623)
+
+
+Started GET "/users/2" for ::1 at 2023-06-28 12:47:48 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 620)
+
+
+Started POST "/login" for ::1 at 2023-06-28 12:58:49 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 4.5ms | Allocations: 44637)
+
+
+  
+NameError (undefined local variable or method `flash' for #<SessionsController:0x0000000000a258>):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/login" for ::1 at 2023-06-28 12:58:55 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 245ms (ActiveRecord: 0.3ms | Allocations: 2554)
+
+
+  
+NameError (undefined local variable or method `flash' for #<SessionsController:0x0000000000a4b0>):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/login" for ::1 at 2023-06-28 13:11:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 264ms (ActiveRecord: 4.2ms | Allocations: 42730)
+
+
+Started GET "/users/2" for ::1 at 2023-06-28 13:11:45 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 808)
+
+
+Started GET "/releases" for ::1 at 2023-06-28 13:25:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReleasesController#index as HTML
+  [1m[36mRelease Load (4.2ms)[0m  [1m[34mSELECT "releases".* FROM "releases"[0m
+  ↳ app/controllers/releases_controller.rb:6:in `index'
+Completed 200 OK in 23ms (Views: 1.3ms | ActiveRecord: 4.2ms | Allocations: 25169)
+
+
+Started GET "/" for ::1 at 2023-06-30 15:06:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 666)
+Completed 200 OK in 21ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 6536)
+
+
+Started GET "/index" for ::1 at 2023-06-30 15:06:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/favicon.ico" for ::1 at 2023-06-30 15:06:28 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2023-06-30 15:06:40 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/login" for ::1 at 2023-06-30 15:06:46 -0600
+Processing by SessionsController#new as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 62)
+
+
+Started GET "/sessions" for ::1 at 2023-06-30 15:06:53 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+Started GET "/" for ::1 at 2023-06-30 15:06:55 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 451)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1170)
+
+
+Started GET "/" for ::1 at 2023-06-30 15:07:42 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 195)
+
+
+Started POST "/login" for ::1 at 2023-06-30 15:08:51 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 282ms (ActiveRecord: 14.4ms | Allocations: 22778)
+
+
+Started GET "/users/2" for ::1 at 2023-06-30 15:08:51 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 805)
+
+
+Started POST "/login" for ::1 at 2023-06-30 15:53:10 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 269ms (ActiveRecord: 15.4ms | Allocations: 9675)
+
+
+Started GET "/users/2" for ::1 at 2023-06-30 15:53:11 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 758)
+
+
+Started POST "/login" for ::1 at 2023-06-30 15:59:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 279ms (ActiveRecord: 6.3ms | Allocations: 42732)
+
+
+Started GET "/users/2" for ::1 at 2023-06-30 15:59:54 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 808)
+
+
+Started GET "/users/1" for ::1 at 2023-06-30 16:18:56 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 41543)
+
+
+Started GET "/users/2" for ::1 at 2023-06-30 16:18:59 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 638)
+
+
+Started GET "/users/1" for ::1 at 2023-06-30 16:19:05 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 638)
+
+
+Started POST "/login" for ::1 at 2023-06-30 16:19:20 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 246ms (ActiveRecord: 0.2ms | Allocations: 769)
+
+
+Started GET "/users/2" for ::1 at 2023-06-30 16:19:21 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 620)
+
+
+Started GET "/" for ::1 at 2023-07-06 15:03:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dianawhalen/.rvm/gems/ruby-2.7.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.2ms | Allocations: 666)
+Completed 200 OK in 24ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 6536)
+
+
+Started POST "/login" for ::1 at 2023-07-06 15:04:27 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 276ms (ActiveRecord: 14.8ms | Allocations: 22808)
+
+
+Started GET "/users/2" for ::1 at 2023-07-06 15:04:27 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 806)
+
+
+Started GET "/users/1" for ::1 at 2023-07-06 15:04:30 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 639)
+
+
+Started GET "/users/1" for ::1 at 2023-07-06 15:04:36 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 638)
+
+
+Started GET "/users/2" for ::1 at 2023-07-06 15:04:42 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 621)
+
+
+Started GET "/users/1" for ::1 at 2023-07-06 15:07:02 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 31ms (Views: 0.6ms | ActiveRecord: 4.2ms | Allocations: 41543)
+
+
+Started GET "/users/1" for ::1 at 2023-07-06 15:07:03 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 638)
+
+
+Started GET "/users/2" for ::1 at 2023-07-06 15:07:05 -0600
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 638)
+
+
+Started POST "/login" for ::1 at 2023-07-12 15:50:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 282ms (ActiveRecord: 8.6ms | Allocations: 42731)
+
+
+Started GET "/users/2" for ::1 at 2023-07-12 15:50:48 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 808)
+
+
+Started POST "/releases" for ::1 at 2023-07-12 15:50:48 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:48 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:48 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:48 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.9ms | Allocations: 1207)
+
+
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_series'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/releases" for ::1 at 2023-07-12 15:50:48 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'short_film'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/releases" for ::1 at 2023-07-12 15:50:49 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:49 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:49 -0600
+Started POST "/releases" for ::1 at 2023-07-12 15:50:49 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/releases" for ::1 at 2023-07-12 15:50:50 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_series'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/login" for ::1 at 2023-07-20 16:21:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 311ms (ActiveRecord: 23.0ms | Allocations: 42734)
+
+
+Started GET "/users/2" for ::1 at 2023-07-20 16:21:08 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.3ms | Allocations: 808)
+
+
+Started POST "/releases" for ::1 at 2023-07-20 16:21:09 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:09 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:09 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:09 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:09 -0600
+Processing by ReleasesController#create as JSON
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}}
+  Parameters: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1425)
+
+
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.6ms | Allocations: 1525)
+
+
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1627)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_series'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 205)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'short_film'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/releases" for ::1 at 2023-07-20 16:21:10 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:10 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:10 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:21:10 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'movie'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+Started POST "/releases" for ::1 at 2023-07-20 16:21:10 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+  
+ActiveRecord::SubclassNotFound (The single-table inheritance mechanism failed to locate the subclass: 'tv_series'. This error is raised because the column 'type' is reserved for storing the class in case of inheritance. Please rename this column if you didn't intend it to be used for storing the inheritance class or overwrite Release.inheritance_column to use another column for that information.):
+  
+app/controllers/releases_controller.rb:14:in `create'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameTypeInReleases (20230720222748)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mALTER TABLE "releases" RENAME COLUMN "type" TO "release_type"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230720222748"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/login" for ::1 at 2023-07-20 16:30:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 278ms (ActiveRecord: 3.8ms | Allocations: 42730)
+
+
+Started GET "/users/2" for ::1 at 2023-07-20 16:30:10 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 808)
+
+
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f999297fb70>, params: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  Parameters: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f999150aff0>, params: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99c0ef8740>, params: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99c10e5350>, params: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99915710e8>, params: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mRelease Create (7.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 539605], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.564834"], ["updated_at", "2023-07-20 22:30:11.564834"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (12.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 3173903], ["year", 2008], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.560404"], ["updated_at", "2023-07-20 22:30:11.560404"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (9.8ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 1586594], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.565442"], ["updated_at", "2023-07-20 22:30:11.565442"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 39ms (Views: 0.3ms | ActiveRecord: 23.6ms | Allocations: 33329)
+
+
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 47ms (Views: 0.2ms | ActiveRecord: 18.1ms | Allocations: 35094)
+
+
+Completed 201 Created in 44ms (Views: 0.2ms | ActiveRecord: 24.0ms | Allocations: 34965)
+
+
+  [1m[36mRelease Create (1.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Wolf"], ["release_type", nil], ["show_id", 4146033], ["year", 2018], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.577562"], ["updated_at", "2023-07-20 22:30:11.577562"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 38ms (Views: 0.5ms | ActiveRecord: 12.3ms | Allocations: 26161)
+
+
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+  [1m[36mRelease Create (1.1ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "No Half Measures: Creating the Final Season of Breaking Bad"], ["release_type", nil], ["show_id", 1672293], ["year", 2013], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.596037"], ["updated_at", "2023-07-20 22:30:11.596037"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 34ms (Views: 0.3ms | ActiveRecord: 20.1ms | Allocations: 14823)
+
+
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Processing by ReleasesController#create as JSON
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+  Parameters: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99d2790b30>, params: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.2ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Snow Globe: A Breaking Bad Short"], ["release_type", nil], ["show_id", 2745161], ["year", 2020], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"], ["created_at", "2023-07-20 22:30:11.623459"], ["updated_at", "2023-07-20 22:30:11.623459"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 2224)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f999101e190>, params: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.6ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes"], ["release_type", nil], ["show_id", 1717036], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-20 22:30:11.634035"], ["updated_at", "2023-07-20 22:30:11.634035"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 9ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 2203)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99c1116e78>, params: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.6ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Recreated"], ["release_type", nil], ["show_id", 1726536], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-20 22:30:11.645549"], ["updated_at", "2023-07-20 22:30:11.645549"]]
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99931ac9b0>, params: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 9ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 3393)
+
+
+  [1m[36mRelease Create (1.0ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 1711631], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-20 22:30:11.650846"], ["updated_at", "2023-07-20 22:30:11.650846"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 8ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 3162)
+
+
+Started POST "/releases" for ::1 at 2023-07-20 16:30:11 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007f99931b74c8>, params: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.5ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad: Original Minisodes"], ["release_type", nil], ["show_id", 3195655], ["year", 2009], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-20 22:30:11.821068"], ["updated_at", "2023-07-20 22:30:11.821068"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 2024)
+
+
+Started POST "/login" for ::1 at 2023-07-24 13:37:54 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 311ms (ActiveRecord: 15.9ms | Allocations: 44636)
+
+
+  
+NameError (undefined local variable or method `flash' for #<SessionsController:0x0000000000a2f8>):
+  
+app/controllers/sessions_controller.rb:11:in `create'
+Started POST "/login" for ::1 at 2023-07-24 13:38:16 -0600
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"wonton@email.com", "password"=>"[FILTERED]", "session"=>{"email"=>"wonton@email.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "wonton@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 243ms (ActiveRecord: 0.2ms | Allocations: 661)
+
+
+Started GET "/users/2" for ::1 at 2023-07-24 13:38:17 -0600
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"2", "user"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 811)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 13:38:17 -0600
+Started POST "/releases" for ::1 at 2023-07-24 13:38:17 -0600
+Started POST "/releases" for ::1 at 2023-07-24 13:38:17 -0600
+Started POST "/releases" for ::1 at 2023-07-24 13:38:17 -0600
+Started POST "/releases" for ::1 at 2023-07-24 13:38:17 -0600
+Processing by ReleasesController#create as JSON
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fa792248>, params: {"release"=>{"title"=>"Breaking Bad", "type"=>"tv_series", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  Parameters: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8df140f40>, params: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd90f1780a0>, params: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "type"=>"movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd91f4d02d8>, params: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "type"=>"tv_movie", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+Processing by ReleasesController#create as JSON
+  [1m[36mRelease Create (6.6ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 3173903], ["year", 2008], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:17.984895"], ["updated_at", "2023-07-24 19:38:17.984895"]]
+  Parameters: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}}
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd91f36af10>, params: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "type"=>"short_film", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 54ms (Views: 0.3ms | ActiveRecord: 13.5ms | Allocations: 27555)
+
+
+  [1m[36mRelease Create (2.2ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 1586594], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:18.008919"], ["updated_at", "2023-07-24 19:38:18.008919"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 60ms (Views: 0.4ms | ActiveRecord: 38.8ms | Allocations: 30129)
+
+
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.1ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 539605], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:18.023547"], ["updated_at", "2023-07-24 19:38:18.023547"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Started POST "/releases" for ::1 at 2023-07-24 13:38:18 -0600
+Completed 201 Created in 57ms (Views: 0.3ms | ActiveRecord: 30.3ms | Allocations: 25115)
+
+
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.2ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "No Half Measures: Creating the Final Season of Breaking Bad"], ["release_type", nil], ["show_id", 1672293], ["year", 2013], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:18.037237"], ["updated_at", "2023-07-24 19:38:18.037237"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Snow Globe: A Breaking Bad Short"], ["release_type", nil], ["show_id", 2745161], ["year", 2020], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:18.040104"], ["updated_at", "2023-07-24 19:38:18.040104"]]
+Completed 201 Created in 55ms (Views: 0.3ms | ActiveRecord: 23.8ms | Allocations: 19643)
+
+
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Started POST "/releases" for ::1 at 2023-07-24 13:38:18 -0600
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 42ms (Views: 0.2ms | ActiveRecord: 20.9ms | Allocations: 18115)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 13:38:18 -0600
+Started POST "/releases" for ::1 at 2023-07-24 13:38:18 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fbafc4a0>, params: {"release"=>{"title"=>"Breaking Bad Wolf", "type"=>"tv_movie", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.1ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Wolf"], ["release_type", nil], ["show_id", 4146033], ["year", 2018], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"], ["created_at", "2023-07-24 19:38:18.063642"], ["updated_at", "2023-07-24 19:38:18.063642"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 8ms (Views: 0.4ms | ActiveRecord: 2.1ms | Allocations: 2211)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fa76ed20>, params: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "type"=>"movie", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.4ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes"], ["release_type", nil], ["show_id", 1717036], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 19:38:18.075899"], ["updated_at", "2023-07-24 19:38:18.075899"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 2196)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fa766bc0>, params: {"release"=>{"title"=>"Breaking Bad Recreated", "type"=>"movie", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.3ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Recreated"], ["release_type", nil], ["show_id", 1726536], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 19:38:18.086733"], ["updated_at", "2023-07-24 19:38:18.086733"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Processing by ReleasesController#create as JSON
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Completed 201 Created in 6ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2465)
+
+
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fa735750>, params: {"release"=>{"title"=>"Breaking Bad", "type"=>"movie", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.3ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 1711631], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 19:38:18.092618"], ["updated_at", "2023-07-24 19:38:18.092618"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 2591)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 13:38:18 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}}
+[31mUnpermitted parameter: :type. Context: { controller: ReleasesController, action: create, request: #<ActionDispatch::Request:0x00007fd8fa6ee698>, params: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "type"=>"tv_series", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}, "controller"=>"releases", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.4ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad: Original Minisodes"], ["release_type", nil], ["show_id", 3195655], ["year", 2009], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 19:38:18.264219"], ["updated_at", "2023-07-24 19:38:18.264219"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 2026)
+
+
+Started GET "/users/2" for ::1 at 2023-07-24 14:00:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `set_user'
+Completed 200 OK in 46ms (Views: 0.4ms | ActiveRecord: 5.8ms | Allocations: 41543)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Processing by ReleasesController#create as JSON
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "show_id"=>3173903, "year"=>2008, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"El Camino: A Breaking Bad Movie", "show_id"=>1586594, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"}}
+  Parameters: {"release"=>{"title"=>"No Half Measures: Creating the Final Season of Breaking Bad", "show_id"=>1672293, "year"=>2013, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie", "show_id"=>539605, "year"=>2019, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Snow Globe: A Breaking Bad Short", "show_id"=>2745161, "year"=>2020, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"}}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (2.0ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 3173903], ["year", 2008], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.225876"], ["updated_at", "2023-07-24 20:00:16.225876"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 34ms (Views: 0.6ms | ActiveRecord: 7.6ms | Allocations: 29005)
+
+
+  [1m[36mRelease Create (3.7ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "The Road to El Camino: Behind the Scenes of El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 539605], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/0539605_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.232927"], ["updated_at", "2023-07-24 20:00:16.232927"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 41ms (Views: 0.4ms | ActiveRecord: 18.9ms | Allocations: 31899)
+
+
+  [1m[36mRelease Create (1.2ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "El Camino: A Breaking Bad Movie"], ["release_type", nil], ["show_id", 1586594], ["year", 2019], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01586594_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.240403"], ["updated_at", "2023-07-24 20:00:16.240403"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (4.1ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "No Half Measures: Creating the Final Season of Breaking Bad"], ["release_type", nil], ["show_id", 1672293], ["year", 2013], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/01672293_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.239552"], ["updated_at", "2023-07-24 20:00:16.239552"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 53ms (Views: 0.5ms | ActiveRecord: 24.2ms | Allocations: 35841)
+
+
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 56ms (Views: 0.4ms | ActiveRecord: 26.4ms | Allocations: 37071)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.5ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Snow Globe: A Breaking Bad Short"], ["release_type", nil], ["show_id", 2745161], ["year", 2020], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/02745161_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.264910"], ["updated_at", "2023-07-24 20:00:16.264910"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 52ms (Views: 0.3ms | ActiveRecord: 31.4ms | Allocations: 24897)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad: Original Minisodes", "show_id"=>3195655, "year"=>2009, "result_type"=>"title", "poster_url"=>nil}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (1.1ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad: Original Minisodes"], ["release_type", nil], ["show_id", 3195655], ["year", 2009], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 20:00:16.284666"], ["updated_at", "2023-07-24 20:00:16.284666"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 8ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 2240)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes", "show_id"=>1717036, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.7ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Featurette - Chicks 'N' Guns: Behind the Scenes"], ["release_type", nil], ["show_id", 1717036], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 20:00:16.297627"], ["updated_at", "2023-07-24 20:00:16.297627"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 7ms (Views: 0.5ms | ActiveRecord: 1.6ms | Allocations: 2035)
+
+
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Recreated", "show_id"=>1726536, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad", "show_id"=>1711631, "year"=>nil, "result_type"=>"title", "poster_url"=>nil}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Recreated"], ["release_type", nil], ["show_id", 1726536], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 20:00:16.311565"], ["updated_at", "2023-07-24 20:00:16.311565"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.9ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad"], ["release_type", nil], ["show_id", 1711631], ["year", nil], ["result_type", "title"], ["poster_url", nil], ["created_at", "2023-07-24 20:00:16.314045"], ["updated_at", "2023-07-24 20:00:16.314045"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 10ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 3741)
+
+
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 9ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 4145)
+
+
+Started POST "/releases" for ::1 at 2023-07-24 14:00:16 -0600
+Processing by ReleasesController#create as JSON
+  Parameters: {"release"=>{"title"=>"Breaking Bad Wolf", "show_id"=>4146033, "year"=>2018, "result_type"=>"title", "poster_url"=>"https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mRelease Create (0.3ms)[0m  [1m[32mINSERT INTO "releases" ("title", "release_type", "show_id", "year", "result_type", "poster_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Breaking Bad Wolf"], ["release_type", nil], ["show_id", 4146033], ["year", 2018], ["result_type", "title"], ["poster_url", "https://cdn.watchmode.com/posters/04146033_poster_w185.jpg"], ["created_at", "2023-07-24 20:00:16.484183"], ["updated_at", "2023-07-24 20:00:16.484183"]]
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/releases_controller.rb:16:in `create'
+Completed 201 Created in 4ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1939)
+
+

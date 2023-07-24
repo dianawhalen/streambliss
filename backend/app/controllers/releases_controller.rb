@@ -39,6 +39,6 @@ class ReleasesController < ApplicationController
   end
 
   def release_params
-    params.require(:release).permit(:title, :type, :tmdb_id, :tmdb_type, :imdb_id, :season_number, :poster_url, :source_release_date, :source_id, :source_name, :is_original, :watchlist_id)
+    params.require(:release).permit(:title, :release_type, :show_id, :year, :result_type, :poster_url)
   end
 end
